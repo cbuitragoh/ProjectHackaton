@@ -2,10 +2,15 @@
 
     right: 0;
     margin-top:50px;
-    width: 150px;
-    height: auto;
-    margin-right:100px;
+    width: 400px;
+    height:auto;
+    margin-right:10px;
     position:absolute ;
+  /*   border: #db5840;
+    border: 2px solid #db5840;
+    padding: 50px 40px 50px 40px;
+    border-radius: 40px; */
+    
 }
 /* .group1{
     position:relative;
@@ -17,7 +22,7 @@
 
 .input {
     display: flex;
-    width: 150px;
+    width: 300px;
     height: 40px;
     border-top: 0;
     border-left: 0;
@@ -48,6 +53,7 @@
     color: #f31a1a;
 }
 .input-label{
+    width: 400px;
     font-size: 2em;
     margin: 5px;
     
@@ -65,6 +71,8 @@
     border-radius: 6px;
     border: 2px solid #db5840;
     cursor: pointer;
+    margin-left: 90px;
+    margin-top: 50px;
     
 }
 .button:hover {
@@ -72,14 +80,26 @@
 }
 
 .foot-lnk{
+    margin-left: 90px;
     margin-top: 50px;
+    text-decoration: none;
+    
 }
+a:hover{
+    color: #7397fa;
+    font-weight: 200;
+}
+a{
+    text-decoration: none;
+    color: black    ;
+}
+
 .img1{
     display: flex;
     flex-direction: row;
     align-content: center;
-    margin-left: 300px;
-    width: 500px;;
+    margin-left: 200px;
+    width:600px;
     height: auto;
 
 }
