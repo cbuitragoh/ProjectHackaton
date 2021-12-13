@@ -9,7 +9,9 @@ loginForm.addEventListener('submit', async ($event) => {
     await login().then((data) => {
             if (data.status === 200) {
                 loginSuccess[0].style.display = 'block'
-                window.location('home');
+                data.json().then((user) => {
+                    window.location.href = user.company ? "/home/gestor" : "/home/talentoso";
+                })
             } else {
                 loginFail[0].style.display = 'block';
             }
@@ -22,8 +24,8 @@ async function login() {
     const url = '/API/login';
     
     const credentials = {
-         username: formElements[0].value ,
-         contrasena: formElements[1].value,
+         email: formElements[0].value ,
+         password: formElements[1].value,
     }
     
     return await post(url, credentials);

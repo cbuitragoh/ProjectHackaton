@@ -33,10 +33,22 @@
                     <input class="input" type="text" name="company" id="company" placeholder="Empresa">
                     <label class="input-label" for="company">Nombre empresa</label>
                 </div>
+                <div class="input-container">
+                    <input class="input" type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+                    <label class="input-label" for="contrasena">Contraseña</label>
+                </div>
                 <span>Tags de preferencia</span>
                 <div class="input-container">
                     <input class="input" type="text" name="tags" id="tags" placeholder="Tags">
                     <label class="input-label" for="tags"></label>
+                </div>
+                <div class="clear-float">
+                    <div class="register-success">
+                        Bienvenido a CREHACE
+                    </div>
+                    <div class="register-fail" >
+                        Usuario no pudo ser registrado. Verifique la información!
+                    </div>
                 </div>
                 <div class="register-button">
                     <input type="submit" class="button-gestor" value="Vamos a gestionar talento" >
@@ -52,5 +64,6 @@
 
         </div>
     </div>
+    <script type="module" src="/register/register.mjs"></script>
 </body>
 </html>

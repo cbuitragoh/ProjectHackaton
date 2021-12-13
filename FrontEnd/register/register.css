@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .login-logo {
     width: 750px;
 }
@@ -90,4 +94,26 @@
 
 .register-button >input:hover {
     cursor: pointer;
+}
+
+.register-fail {
+    background-color: #f5a8a8;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.register-success {
+    background-color: lightgreen;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: green;
+    border-radius: 5px;
+    display: none;
+    font-size: 1rem;
+    text-align: center;
 }
