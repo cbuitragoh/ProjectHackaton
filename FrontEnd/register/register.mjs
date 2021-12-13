@@ -9,9 +9,8 @@ registerForm.addEventListener('submit', async ($event) => {
     await register().then((data) => {
             if (data.status === 200) {
                 registerSuccess[0].style.display = 'block';
-                const path = window.location.pathname.split('/');
 
-                window.location.href = path[2] === 'gestor' ? "/home/gestor" : "/home/talentoso";
+                window.location.href = "/login";
             } else {
                 registerFail[0].style.display = 'block';
                 setTimeout(() => {

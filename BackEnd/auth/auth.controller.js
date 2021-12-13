@@ -19,7 +19,7 @@ exports.login = async (req, res, next) => {
             return res.status(401).send('Unauthorized');
         }  */   
 
-        return user[0].password === req.password ? res.status(200).send(user[0]) : res.status(401).send('Unauthorized');
+        return user[0].password === body.password ? res.status(200).send(user[0]) : res.status(401).send('Unauthorized');
     } catch (error) {
         console.log(error)
         returnres.status(500).send(error.message || error);
