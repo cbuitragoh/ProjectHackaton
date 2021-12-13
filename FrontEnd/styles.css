@@ -60,7 +60,6 @@ a {
     text-align: right;
     width: 100%;
     padding: 0 0.5rem;
-    color: white;
     box-shadow: 0 0 5px lightgrey;
 }
 
@@ -102,4 +101,9 @@ a {
 }
 .button:hover {
     background: #f31a1a;
+}
+
+.clear-float {
+    clear: both;
+    margin-top: 1rem;
 }
