@@ -48,6 +48,11 @@ body {
     font-family: "Post No Bills Colombo ExtraBold Regular";
     font-size: 16px;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .input {
     height: 50px;
     border: 1px solid lightgray;
