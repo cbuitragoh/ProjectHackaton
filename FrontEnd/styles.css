@@ -1,38 +1,100 @@
-.input-container {
-    display: flex;
-    flex-direction: column;
+@font-face {
+font-family: 'Post No Bills Colombo Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Post No Bills Colombo Regular'), url('PostNoBillsColombo-Regular.woff') format('woff');
 }
 
+
+@font-face {
+font-family: 'Post No Bills Colombo Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Post No Bills Colombo Bold'), url('PostNoBillsColombo-Bold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Post No Bills Colombo Light Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Post No Bills Colombo Light Regular'), url('PostNoBillsColombo-Light.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Post No Bills Colombo Medium Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Post No Bills Colombo Medium Regular'), url('PostNoBillsColombo-Medium.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Post No Bills Colombo SemiBold Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Post No Bills Colombo SemiBold Regular'), url('PostNoBillsColombo-SemiBold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Post No Bills Colombo ExtraBold Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Post No Bills Colombo ExtraBold Regular'), url('PostNoBillsColombo-ExtraBold.woff') format('woff');
+}
+body {
+    font-family: "Post No Bills Colombo ExtraBold Regular";
+    font-size: 16px;
+}
 .input {
-    height: 40px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0.5px solid lightgray;
-    border-radius: 4px 4px 0 0;
+    height: 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
     text-align: right;
+    width: 100%;
     padding: 0 0.5rem;
+    color: white;
+    box-shadow: 0 0 5px lightgrey;
 }
 
 .input:hover , .input:focus , .input:active {
     border-bottom: 2px solid;
-    background-color: #f0e091;
+    background-color: #E9746E;
     outline: none;
+    color: white;
 }
 
 .input-label {
     position: relative;
-    top: -1.8rem;
+    top: -2.3rem;
     left: 1rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .input:hover ~ .input-label, .input:focus ~ .input-label, .input:active ~ .input-label, .input:not(:placeholder-shown) ~ .input-label {
-    top: -2.2rem;
+    top: -2.6rem;
 }
 
 .input-error {
     font-size: 10px;
     margin-top: -10px;
     color: #f31a1a;
+}
+
+.button {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 60 0;
+    font-size: 20px;
+    color: #ffd9d9;
+    background-color: #f08774;
+    border-radius: 6px;
+    border: 2px solid #db5840;
+    cursor: pointer;
+    
+}
+.button:hover {
+    background: #f31a1a;
 }
