@@ -2,8 +2,8 @@ import { checkEmail, checkContrasena, validateForm } from './form.mjs';
 import { post } from '../javascript/CRUD.mjs';
 
 const loginForm = document.getElementById('form-login');
-const loginFail = document.getElementsByClassName('login-fail')
-const loginSuccess = document.getElementsByClassName('login-success')
+const loginFail = document.getElementsByClassName('login-fail');
+const loginSuccess = document.getElementsByClassName('login-success');
 const userEmail = document.getElementById('email');
 const userContrasena = document.getElementById('contrasena');
 
