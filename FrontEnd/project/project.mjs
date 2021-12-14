@@ -1,3 +1,5 @@
+import { post, get } from '../javascript/CRUD.mjs';
+
 const profileImage = document.getElementById('profile-image');
 const profileName = document.getElementById('profile-name');
 const buttonProject = document.getElementById('button-project');
@@ -7,7 +9,6 @@ const formProfile = document.getElementById('form-profile');
 const buttonProfile = document.getElementById('button-profile');
 const registerForm = document.getElementById('register-form');
 let currentUser;
-let newProject = false;
 const profiles = [];
 
 (() => {
@@ -17,6 +18,7 @@ const profiles = [];
     profileImage.innerHTML = currentUser.profileImage ? currentUser.profileImage : "<i class='icon-badge'></i>"
     handleButtonProject();
     handleButtonProfile();
+    ownProjects();
 })();
 
 
@@ -67,4 +69,58 @@ function handleButtonProfile() {
         
 
     })
+}
+
+registerForm.addEventListener('submit', async ($event) => {
+    $event.preventDefault();
+    await createProject().then((data) => {
+        if (data.status === 200) {
+            loginSuccess[0].style.display = 'block'
+            ownProjects();
+        } else {
+            loginFail[0].style.display = 'block';
+        }
+    });
+})
+
+async function createProject() {
+    const formElements = document.getElementById('register-form').elements;
+    const url = '/API/project';
+
+    const project = {
+        name: formElements[0].value,
+        description: formElements[1].value,
+        profiles: profiles.slice(1),
+        idGestor: currentUser._id
+    }
+
+    return post(url, project);
+ 
+}
+
+async function ownProjects() {
+    const url = `/API/project/${currentUser._id}`;
+
+    await get(url).then((data) => {
+        if(data.status === 200) {
+            data.json().then((projects) => {
+                projectContainer.innerHTML = '';
+
+                projects.forEach((project) => {
+                    project.profiles = project.profiles.map((profile) => `<li>${profile}</li>`)
+                    projectContainer.innerHTML += `<div class="project-item">
+                            <div class="project-name">${project.name}</div>
+                            <div class="project-description">${project.description}</div>
+                            <span>Perfiles</span>
+                            <hr>
+                            <ul class="project-profile">
+                                ${project.profiles}
+                            </ul>
+                        </div>`
+                })
+            })
+        }
+    })
+
+
 }

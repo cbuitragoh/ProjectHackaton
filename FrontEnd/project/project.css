@@ -176,3 +176,34 @@ body {
 hr {
     margin: 0;
 }
+
+.project-item {
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px grey;
+    margin-right: 0.5rem;
+}
+
+.project-name {
+    padding: 0.5rem;
+    background-color: #f08774;
+    border-radius: 5px 5px 0 0;
+    color: white;
+}
+
+.project-description {
+    padding: 0.5rem;
+}
+
+.project-description ~ span {
+    padding: 0 0.5rem;
+}
+
+.project-profile {
+    padding-bottom: 0.5rem;
+}
+
+.project-container {
+    margin-top: 1rem;
+    display: flex;
+}
