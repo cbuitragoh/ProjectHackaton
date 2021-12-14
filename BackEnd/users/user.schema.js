@@ -8,7 +8,8 @@ var userSchema = new mongoose.Schema({
     tags: [],
     company: String,
     email: String,
-    password: String
+    password: String,
+    profileUrl: String
 });
 
 

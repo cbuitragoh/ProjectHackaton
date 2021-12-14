@@ -54,6 +54,8 @@ body {
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
+    width: 80%;
+    margin: auto;
 }
 
 .button-gestor {
@@ -62,6 +64,8 @@ body {
     border-radius: 5px;
     padding: 15px 30px;
     font-size: 1.3rem;
+    font-family: 'Post No Bills Colombo Bold';
+    border: none;
 }
 
 .button-talentoso {

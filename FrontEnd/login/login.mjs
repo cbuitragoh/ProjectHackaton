@@ -10,7 +10,8 @@ loginForm.addEventListener('submit', async ($event) => {
             if (data.status === 200) {
                 loginSuccess[0].style.display = 'block'
                 data.json().then((user) => {
-                    window.location.href = user.company ? "/home/gestor" : "/home/talentoso";
+                    localStorage.setItem("CURRENT_USER", JSON.stringify(user));
+                    window.location.href = user.company ? `/home/gestor/${user._id}` :  `/home/talentoso/${user._id}` ;
                 })
             } else {
                 loginFail[0].style.display = 'block';

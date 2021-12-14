@@ -45,7 +45,7 @@ font-weight: normal;
 src: local('Post No Bills Colombo ExtraBold Regular'), url('PostNoBillsColombo-ExtraBold.woff') format('woff');
 }
 body {
-    font-family: "Post No Bills Colombo ExtraBold Regular";
+    font-family: "Post No Bills Colombo Regular";
     font-size: 16px;
 }
 
@@ -106,4 +106,18 @@ a {
 .clear-float {
     clear: both;
     margin-top: 1rem;
+}
+
+.icon-badge {
+    -webkit-mask: url(/images/badge.svg);
+    mask: url(/images/badge.svg);
+    display: inline-block;
+    height: 15rem;
+    vertical-align: -0.125rem;
+    width: 11rem;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    background-color: #E9746E;
 }

@@ -19,12 +19,18 @@ router.get('/register/talentoso', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../FrontEnd/register/register-talentoso', 'register-talentoso.html'));
 })
 
-router.get('/home/gestor', function(req, res, next) {
+router.get('/home/profile', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../FrontEnd/profile', 'profile.html'));
+})
+
+router.get('/home/gestor/:id', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../FrontEnd/home/home-gestor', 'home-gestor.html'));
 })
 
-router.get('/home/talentoso', function(req, res, next) {
+router.get('/home/talentoso/:id', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../FrontEnd/home/home-talentoso', 'home-talentoso.html'));
 })
+
+
 
 module.exports = router;
