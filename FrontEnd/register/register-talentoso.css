@@ -91,3 +91,8 @@
 .register-button >input:hover {
     cursor: pointer;
 }
+
+.textarea{
+    height: 10.4em; 
+    
+}
