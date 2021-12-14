@@ -8,6 +8,7 @@ const projectContainer = document.getElementById('project-container');
 const formProfile = document.getElementById('form-profile');
 const buttonProfile = document.getElementById('button-profile');
 const registerForm = document.getElementById('register-form');
+const profileAccessHome = document.getElementById('profile-access-home');
 let currentUser;
 const profiles = [];
 
@@ -16,6 +17,7 @@ const profiles = [];
 
     profileName.textContent = currentUser.name;
     profileImage.innerHTML = currentUser.profileImage ? currentUser.profileImage : "<i class='icon-badge'></i>"
+    profileAccessHome.innerHTML = `<a href="/home/${currentUser.company ? `gestor/${currentUser._id}` : `talentoso/${currentUser._id}`}">Home</a>`
     handleButtonProject();
     handleButtonProfile();
     ownProjects();
@@ -76,7 +78,7 @@ registerForm.addEventListener('submit', async ($event) => {
     await createProject().then((data) => {
         if (data.status === 200) {
             loginSuccess[0].style.display = 'block'
-            ownProjects();
+            location.reload();
         } else {
             loginFail[0].style.display = 'block';
         }
@@ -107,7 +109,7 @@ async function ownProjects() {
                 projectContainer.innerHTML = '';
 
                 projects.forEach((project) => {
-                    project.profiles = project.profiles.map((profile) => `<li>${profile}</li>`)
+                    project.profiles = project.profiles.map((profile) => `<li>${profile.name}</li>`)
                     projectContainer.innerHTML += `<div class="project-item">
                             <div class="project-name">${project.name}</div>
                             <div class="project-description">${project.description}</div>

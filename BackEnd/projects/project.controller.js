@@ -22,7 +22,7 @@ exports.register = async (req, res, next) => {
 exports.getProjects = async (req, res, next) => {
     const session = await mongoose.startSession();
     session.startTransaction();
-    var user = req.query.id;
+    var user = req.params.id;
 
     
     try {
