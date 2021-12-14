@@ -23,6 +23,10 @@ router.get('/home/profile', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../FrontEnd/profile', 'profile.html'));
 })
 
+router.get('/home/project', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../FrontEnd/project', 'project.html'));
+})
+
 router.get('/home/gestor/:id', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../FrontEnd/home/home-gestor', 'home-gestor.html'));
 })

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/project/project.css">
+    <title>CREHACE</title>
+</head>
+<body>
+    <div class="home-container">
+        <div class="profile-bar">
+            <div class="profile-image" id="profile-image">
+
+            </div>
+            <div class="profile-name" id="profile-name">
+
+            </div>
+            <hr>
+            <ul class="profile-access">
+                <li>
+                    <a href="/home/profile">Mi perfil</a>
+                </li>
+                <li><a href="/home/project">Mis proyectos</a></li>
+                <li><a href="#">Mis colaboradores</a></li>
+            </ul>
+            <div class="image-container">
+                <img class="login-logo" src="../../images/logo.jpg" alt="crehace">
+                <div class="logo-text">
+                    <span>CREHACE</span>
+                    <span>Creemos juntos desde lo que sabes hacer</span>
+                </div>
+    
+            </div>
+        </div>
+        <div class="publishes">
+            
+            <div class="recommendations">
+                Tús proyectos
+                <button type="button" class="button-gestor button-right" id="button-project">Crea tú proyecto</button>
+                <hr>
+                
+            </div>
+            <div class="form-container" id="form-container">
+                <form id="register-form">
+                    <div class="input-container">
+                        <input class="input" type="text" name="name" id="name" placeholder="Nombre proyecto">
+                        <label class="input-label" for="name">Nombre proyecto </label>
+                    </div>
+                    <div class="input-container">
+                        <textarea class="input textarea" type="text" name="description" id="description" placeholder=""></textarea>
+                        <label class="input-label" for="description">Descripción del proyecto</label>
+                    </div>
+                    <button type="button" class="button-gestor button-right" id="button-profile">Agregar perfil</button>
+                    <hr>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="form-profile" id="form-profile">
+                        <div class="input-container">
+                            <input class="input" type="text" name="profile" id="profile" placeholder="">
+                            <label class="input-label" for="profile">Nombre perfil</label>
+                        </div>
+                        <div class="input-container">
+                            <textarea class="input textarea" type="text" name="experience" id="experience" placeholder=""></textarea>
+                            <label class="input-label" for="experience">Experiencia Especifica</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input class="input" type="text" name="location" id="location" placeholder="Ubicación (Ciudad - Dpto)">
+                                <label class="input-label" for="location">Ubicación</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="input" type="text" name="compensation" id="compensation" placeholder="Tipo de compensación">
+                                <label class="input-label" for="compensation">Tipo de compensación</label>
+                            </div>
+                        </div>
+                        <span>Perfiles</span>
+                        <hr>
+                        <div class="profile-list" id="profile-list">
+                            
+                            <div class="profile-item">
+                                <div class="profile-title">
+                                    Barman
+                                </div>
+                                <div class="profile-description">
+                                    Lorem ipsum dolor ajhhksdansb, jdhsakjdhka, jhaskdjhkjkad
+                                </div>
+                                <hr>
+                                <div class="profile-footer">
+                                    <span>Medellin - Antioquia</span>
+                                    <span>Monetaria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    <div class="register-button">
+                        <input type="submit" class="button-gestor button-right" value="Guardar proyecto" >
+                    </div>
+                </form>
+            </div>
+            <div class="project-container" id="project-container">
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/project/project.mjs"></script>
+</body>
+</html>
