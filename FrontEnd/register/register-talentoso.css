@@ -1,7 +1,3 @@
-body {
-    overflow: hidden;
-}
-
 .login-logo {
     width: 750px;
 }
@@ -27,7 +23,7 @@ body {
 .logo-text > span:last-of-type {
     font-size: 36px;
     font-family: Post No Bills Colombo Regular;
-    position: left;
+    position: relative;
     top: -3rem;
 }
 
@@ -54,8 +50,6 @@ body {
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
-    width: 80%;
-    margin: auto;
 }
 
 .button-gestor {
@@ -64,8 +58,6 @@ body {
     border-radius: 5px;
     padding: 15px 30px;
     font-size: 1.3rem;
-    font-family: 'Post No Bills Colombo Bold';
-    border: none;
 }
 
 .button-talentoso {
@@ -100,24 +92,7 @@ body {
     cursor: pointer;
 }
 
-.register-fail {
-    background-color: #f5a8a8;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: white;
-    border-radius: 5px;
-    display: none;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.register-success {
-    background-color: lightgreen;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: green;
-    border-radius: 5px;
-    display: none;
-    font-size: 1rem;
-    text-align: center;
+.textarea{
+    height: 10.4em; 
+    
 }
