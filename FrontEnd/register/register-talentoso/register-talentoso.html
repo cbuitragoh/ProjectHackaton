@@ -6,20 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="/register/register-talentoso.css">
+    <link rel="stylesheet" href="/register/register.css">
     <title>Document</title>
 </head>
 <body>
     
     <div class="home-register">
-        <div class="image-container">
-            <img class="login-logo" src="../images/logo.jpg" alt="crehace">
-            <div class="logo-text">
-                <span>CREHACE</span>
-                <span>Creemos juntos desde lo que sabes hacer</span>
-            </div>
-
-        </div>
         
         <div class="register-form-container">
             <div class="register-title">
@@ -39,20 +31,47 @@
                     <label class="input-label" for="phone">Teléfono de contacto</label>
                 </div>
                 <div class="input-container">
-                    <input class="input" type="text" name="company" id="company" placeholder="Empresa">
-                    <label class="input-label" for="company">Nombre empresa</label>
-                </div>
-                <span>Mi talento</span>
+                    <input class="input" type="text" name="talent" id="talent" placeholder="Talento o experticia">
+                    <label class="input-label" for="talent">Talento</label>
+                </div>                
                 <div class="input-container">
-                    <textarea class="input textarea" type="text" name="tags" id="tags" placeholder="talento"><textarea></textarea>
+                    <input class="input" type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+                    <label class="input-label" for="contrasena">Contraseña</label>
+                </div>
+                <span>Tags de referencia</span>
+                <div class="input-container">
+                    <input class="input" type="text" name="tags" id="tags" placeholder="Tags separados por (,)">
                     <label class="input-label" for="tags"></label>
                 </div>
+                <span>Cuentanos acerca de ti y tu talento</span>
+                <div class="input-container">
+                    <textarea class="input textarea" type="text" name="description" id="description" placeholder="talento"></textarea>
+                    <label class="input-label" for="description"></label>
+                </div>
+                
+                <div class="clear-float">
+                    <div class="register-success">
+                        Bienvenido a CREHACE
+                    </div>
+                    <div class="register-fail" >
+                        Usuario no pudo ser registrado. Verifique la información!
+                    </div>
+                </div>
                 <div class="register-button">
-                    <input type="submit" class="button-gestor" value="Vamos a gestionar talento" >
+                    <input type="submit" class="button-talentoso" value="Quiero ser un talentoso" >
                 </div>
             </form>
         </div>
-                    
+        <div class="image-container">
+            <img class="login-logo" src="../images/logo.jpg" alt="crehace">
+            <div class="logo-text">
+                <span>CREHACE</span>
+                <span>Creemos juntos desde lo que sabes hacer</span>
+            </div>
+
+        </div>
     </div>
+    <script type="module" src="/register/register.mjs"></script>
+
 </body>
 </html>

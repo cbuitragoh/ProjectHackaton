@@ -37,7 +37,8 @@ async function register() {
     credentials = {
         ...credentials,
         company: path[2] === 'gestor' ? formElements[3].value : null,
-        talent: path[2] === 'talentoso' ? formElements[3].value : null
+        talent: path[2] === 'talentoso' ? formElements[3].value : null,
+        description: formElements[6] ? formElements[6].value : null
     }
     
     return await post(url, credentials);
