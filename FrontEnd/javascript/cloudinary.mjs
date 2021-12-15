@@ -1,5 +1,5 @@
 import {postFile} from './CRUD.mjs';
-import config from '../resources/config.json';
+import { config } from '../resources/config.mjs';
 
 export async function sendImage(folder, file) {
 
