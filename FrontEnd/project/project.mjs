@@ -110,8 +110,10 @@ async function ownProjects() {
 
                 projects.forEach((project) => {
                     project.profiles = project.profiles.map((profile) => `<li>${profile.name}</li>`)
-                    projectContainer.innerHTML += `<div class="project-item">
-                            <div class="project-name">${project.name}</div>
+                    projectContainer.innerHTML += `<div class="project-item">                            
+                            <div class="project-name">
+                            ${project.name}
+                            <input type="button" class="button-card" value="x" ></div>
                             <div class="project-description">${project.description}</div>
                             <span>Perfiles</span>
                             <hr>
