@@ -108,6 +108,23 @@ a {
     background: #f31a1a;
 }
 
+.button-card {
+    text-decoration: none;
+    padding: 0px;
+    font-weight: 60 0;
+    font-size: 20px;
+    color: #ffd9d9;
+    background-color: #f08774;
+    border-radius: 6px;
+    border: 2px solid #db5840;
+    cursor: pointer;
+    float: right;
+    
+}
+.button-card:hover {
+    background: #f31a1a;
+}
+
 .clear-float {
     clear: both;
     margin-top: 1rem;
