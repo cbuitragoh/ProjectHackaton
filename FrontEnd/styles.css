@@ -56,6 +56,7 @@ a {
 .input-container {
     display: flex;
     flex-direction: column;
+    max-width: 95%;
 }
 .input {
     height: 50px;
@@ -181,4 +182,30 @@ a {
 
 .form-group > .input-container {
     width: 48%;
+}
+
+.mailer {
+    border-radius: 5px;
+    box-shadow: 0 0 5px grey;
+    padding: 1rem;
+    z-index: 1;
+    display: none;
+    position: fixed;
+    width: 350px;
+    bottom: 4rem;
+    background-color: white;
+}
+
+.mailer > span {
+    font-size: 1.3rem;
+}
+
+.mailer-icon {
+    position: fixed;
+    bottom: 0;
+    left: 32rem;
+    width: 200px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.1rem crimson);
+    z-index: 2;
 }

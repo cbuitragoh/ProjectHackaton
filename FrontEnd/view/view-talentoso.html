@@ -38,7 +38,27 @@
             <div class="profile-description" id="profile-description">
 
             </div>
-            
+            <div class="mailer" id="mailer">
+                <span>Contacta al talentoso</span>
+                <form id="mailer-form">
+                    <div class="input-container">
+                        <textarea class="textarea" type="text" name="mensaje" id="mensaje" placeholder=""></textarea>
+                        <label class="input-label" for="mensaje"></label>
+                    </div>
+                    <div class="clear-float">
+                        <div class="login-success">
+                            Mensaje Enviado!
+                        </div>
+                        <div class="login-fail" >
+                            Mensaje no Enviado!
+                        </div>
+                    </div>
+                    <div class="register-button">
+                        <input type="submit" class="button-talentoso" value="Enviar" >
+                    </div>
+                </form>
+            </div>
+            <img class="mailer-icon" id="mailer-icon" src="/images/envelope.png">
         </div>
         <div class="publishes">
             <div class="recommendations">
@@ -57,6 +77,7 @@
     
             </div>
         </div>
+        
     </div>
     <script type="module" src="/view/view.mjs"></script>
 </body>

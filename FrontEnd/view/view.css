@@ -103,3 +103,29 @@ line-height: 36px;
     bottom: -7rem;
     right: 6rem;
 }
+
+.register-button {
+    margin-top: 1rem;
+}
+
+.login-fail {
+    background-color: #f5a8a8;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.login-success {
+    background-color: lightgreen;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: green;
+    border-radius: 5px;
+    display: none;
+    font-size: 1rem;
+    text-align: center;
+}

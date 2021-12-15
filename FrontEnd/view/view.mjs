@@ -9,11 +9,19 @@ const profileTitle = document.getElementById('profile-title');
 const profileTags = document.getElementById('profile-tags');
 const profileDescription = document.getElementById('profile-description');
 const projectContainer = document.getElementById('project-container');
+const mailerIcon = document.getElementById('mailer-icon');
+const mailer = document.getElementById('mailer');
+const mailerForm = document.getElementById('mailer-form');
+
+const loginSuccess = document.getElementsByClassName('login-success');
+const loginFail = document.getElementsByClassName('login-fail');
 
 let currentUser;
+let currentVisitor;
 
 (() => {
     const userId = window.location.pathname.split("/");
+    currentVisitor = localStorage.getItem("CURRENT_USER");
     const url = `/API/register/${userId[2]}`
     get(url).then((data) => {
         if (data.status === 200) {
@@ -57,3 +65,35 @@ async function getEvidencesByUser() {
         }
     })
 }
+
+mailerIcon.addEventListener('click', () => {
+    mailer.style.display = "block";
+})
+
+mailerForm.addEventListener('submit', ($event) => {
+    $event.preventDefault();
+    const url = '/API/mail'
+    const formElements = mailerForm.elements;
+
+    const mailOptions = {
+        from: currentVisitor.name,
+        to: [currentUser.email, currentVisitor.email],
+        subject: "Me interesa tu perfil",
+        text: formElements[0].value
+    }
+
+    post(url, mailOptions).then((data) => {
+        if (data.status === 200) {
+            loginSuccess[0].style.display = 'block';
+            location.reload()
+        } else {
+            loginFail[0].style.display = 'block';
+            setTimeout(() => {
+                loginFail[0].style.display = 'none'
+            }, 2000);
+        }
+    })
+    
+    
+
+})

@@ -9,6 +9,7 @@ var authRouter = require('./BackEnd/auth/index');
 var userRouter = require('./BackEnd/users/index');
 var projectRouter = require('./BackEnd/projects/index');
 var evidenceRouter = require('./BackEnd/evidences/index');
+var mailRouter = require('./BackEnd/mail/index');
 
 var app = express();
 
@@ -19,11 +20,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'FrontEnd')));
 app.use(express.static(path.join(__dirname, 'FrontEnd', 'javascript')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/', indexRouter);
 app.use('/API/login', authRouter);
 app.use('/API/register', userRouter);
 app.use('/API/project', projectRouter);
 app.use('/API/evidence', evidenceRouter);
+app.use('/API/mail', mailRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
