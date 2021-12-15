@@ -27,7 +27,7 @@ body {
 .logo-text > span:last-of-type {
     font-size: 36px;
     font-family: Post No Bills Colombo Regular;
-    position: left;
+    position: relative;
     top: -3rem;
 }
 
@@ -36,6 +36,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 450px;
+    z-index: 1;
 }
 
 .home-gestor > span, .home-talentoso > span {
@@ -51,8 +52,8 @@ body {
 .home-register {
     
     display: flex;
-    align-items: center;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
     width: 80%;
     margin: auto;

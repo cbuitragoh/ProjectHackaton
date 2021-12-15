@@ -11,7 +11,7 @@
 <body>
     <div class="logout-container">
         <span>
-            <input type="button" class="button-logout" value="loguot" onclick="logout()">
+            <input type="button" class="button-logout" value="cerrar sesión" onclick="logout()">
         </span>
     </div>
     <div class="home-container">
@@ -112,8 +112,9 @@
     <script type="module" src="/project/project.mjs"></script>
     <script>
         function logout(){
-    window.location.href="/";
-}
+            window.location.href="/";
+            localStorage.removeItem("CURRENT_USER");
+        }
     </script>
 </body>
 </html>

@@ -135,6 +135,7 @@ a {
     font-size: 1.3rem;
     font-family: 'Post No Bills Colombo Bold';
     border: none;
+    cursor:pointer;
 }
 
 .button-talentoso {
@@ -145,6 +146,8 @@ a {
     font-size: 1.3rem;
     font-family: 'Post No Bills Colombo Bold';
     border: none;
+
+    cursor:pointer;
 }
 
 .button-logout {
@@ -157,12 +160,13 @@ a {
     font-family: 'Post No Bills Colombo Bold';
     border: none;
     float: right;
-    margin-right: 15%;
+    margin-right: 12%;
+    cursor: pointer;
 }
+
 .logout-container {
-
-    display: block;
-
+    position: absolute;
+    right: 0;
 }
 
 .textarea{
