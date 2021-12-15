@@ -11,7 +11,7 @@ body {
 }
 
 .login-logo {
-    width: 750px;
+    width: 650px;
     margin-top: 10rem;
 }
 
@@ -27,13 +27,13 @@ body {
     font-family: Post No Bills Colombo Regular;
     font-style: normal;
     font-weight: normal;
-    font-size: 120px;
+    font-size: 100px;
     color: #E60F0F;
     text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .logo-text > span:last-of-type {
-    font-size: 36px;
+    font-size: 28px;
     font-family: Post No Bills Colombo Regular;
     position: relative;
     top: -3rem;
@@ -42,7 +42,7 @@ body {
 
 .login-register {
     position: absolute;
-    right: 18%;
+    right: 14%;
     font-size: 2rem;
     margin-top: 1rem;
     font-size: 48px;
