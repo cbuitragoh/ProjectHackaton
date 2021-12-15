@@ -34,6 +34,6 @@ exports.getProjects = async (user, session) => {
 
 exports.getProjectsByTalent = async (talent, session) => {
    
-     const projects = await Project.find({active: true}).session(session);
-     return projects.filter(project => project.profiles.filter(profile => profile.name.includes(talent)).length);
+     return await Project.find({active: true}).session(session);
+     // return projects.filter(project => project.profiles.filter(profile => profile.name.includes(talent)).length);
 }
