@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="/home/home.css">
 </head>
 <body>
+    <div class="logout-container">
+        <span>
+            <input type="button" class="button-logout" value="loguot" onclick="logout()">
+        </span>
+    </div>
     <div class="home-container">
         <div class="profile-bar">
             <div class="profile-image" id="profile-image">
@@ -52,5 +57,10 @@
         </div>
     </div>
     <script src="/home/home.mjs"></script>
+    <script>
+        function logout(){
+    window.location.href="/";
+}
+    </script>
 </body>
 </html>

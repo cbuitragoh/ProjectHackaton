@@ -9,6 +9,11 @@
     <title>CREHACE</title>
 </head>
 <body>
+    <div class="logout-container">
+        <span>
+            <input type="button" class="button-logout" value="loguot" onclick="logout()">
+        </span>
+    </div>
     <div class="home-profile">
         <div class="profile-container">
             <div class="profile-title" id="profile-title">
@@ -49,5 +54,10 @@
         </div>
     </div>
     <script type="module" src="/profile/profile.mjs"></script>
+    <script>
+        function logout(){
+    window.location.href="/";
+}
+    </script>
 </body>
 </html>
