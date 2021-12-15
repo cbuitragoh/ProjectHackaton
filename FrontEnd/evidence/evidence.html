@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/evidence/evidence.css">
     <title>CREHACE</title>
-    
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="/home/home.css">
 </head>
 <body>
     <div class="home-container">
@@ -20,37 +19,42 @@
             </div>
             <hr>
             <ul class="profile-access">
+                <li id="profile-access-home">
+                   
+                </li>
                 <li>
                     <a href="/home/profile">Mi perfil</a>
                 </li>
-                <li><a href="/home/evidences">Mis evidencias</a></li>
+                <li><a href="/home/evidences">Mis Evidencias</a></li>
             </ul>
             <div class="image-container">
                 <img class="login-logo" src="../../images/logo.jpg" alt="crehace">
                 <div class="logo-text">
                     <span>CREHACE</span>
-                    <span>Colabora en algún proyecto</span>
+                    <span>Creemos juntos desde lo que sabes hacer</span>
                 </div>
     
             </div>
         </div>
         <div class="publishes">
-            <div class="title">
-                Talentoso
-            </div>
-            <div class="input-container">
-                <input class="input" type="text" name="tags" id="tags" placeholder="Busca proyectos que permitan dar a conocer tus habilidades">
-                <label class="input-label" for="tags"></label>
-            </div>
             <div class="recommendations">
-                Nuestras recomendaciones
-                <hr>
+                Tús Evidencias
+                <button type="button" class="button-gestor button-right" id="button-project">Agrega Evidencia</button>
+                <input 
+                    class="evidence-file"
+                    type="file" 
+                    enctype='multipart/form-data'
+                    id="fileInput">
+                <hr>     
+            </div>
+            <div class="form-container" id="form-container">
+            
             </div>
             <div class="project-container" id="project-container">
                 
             </div>
         </div>
     </div>
-    <script type="module" src="/home/home.mjs"></script>
+    <script type="module" src="/evidence/evidence.mjs"></script>
 </body>
 </html>

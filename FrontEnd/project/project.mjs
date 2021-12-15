@@ -16,7 +16,7 @@ const profiles = [];
     currentUser = JSON.parse(localStorage.getItem("CURRENT_USER"));
 
     profileName.textContent = currentUser.name;
-    profileImage.innerHTML = currentUser.profileImage ? currentUser.profileImage : "<i class='icon-badge'></i>"
+    profileImage.innerHTML = currentUser.profileUrl ?  `<img width="250px" src="${currentUser.profileUrl}">` : "<i class='icon-badge'></i>"
     profileAccessHome.innerHTML = `<a href="/home/${currentUser.company ? `gestor/${currentUser._id}` : `talentoso/${currentUser._id}`}">Home</a>`
     handleButtonProject();
     handleButtonProfile();

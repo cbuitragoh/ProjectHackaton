@@ -2,12 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 var jsonParser = express.json();
-var projectController = require('./project.controller');
+var evidenceController = require('./evidence.controller');
 // var tokenController = require('./token.controller');
 
-router.post('/', jsonParser, projectController.register);
-router.get('/talent/:talent', jsonParser, projectController.getProjectsByTalent);
-router.get('/:id', jsonParser, projectController.getProjects);
+router.post('/', jsonParser, evidenceController.register);
+router.get('/:id', jsonParser, evidenceController.getEvidences);
 /* 
 router.get('/validate', jsonParser, tokenController.validate);
 router.get('/forget-password', jsonParser, tokenController.getTemporaryToken);

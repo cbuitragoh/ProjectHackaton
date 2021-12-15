@@ -1,17 +1,4 @@
-body {
-    overflow: hidden;
-}
-.home-profile {
-    
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 80%;
-    margin: auto;
-}
-
-.profile-title {
+.view-title {
     font-family: Post No Bills Colombo Regular;
     font-style: normal;
     font-weight: normal;
@@ -79,38 +66,15 @@ line-height: 36px;
     justify-content: space-evenly;
 }
 
-.login-logo {
-    width: 750px;
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 14rem;
-    top: -10rem;
-}
-
-
-.logo-text > span:first-of-type {
+.profile-description {
     font-family: Post No Bills Colombo Regular;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 120px;
-    color: #E60F0F;
-    text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 36px;
+
 }
 
-.logo-text > span:last-of-type {
-    font-size: 36px;
-    font-family: Post No Bills Colombo Regular;
-    position: relative;
-    top: -3rem;
-}
-
-.profile-container {
-    margin-top: 2rem;
-}
 
 .tag {
     font-family: 'Post No Bills Colombo Regular';
@@ -134,6 +98,8 @@ line-height: 36px;
     font-size: 20px;
 }
 
-.evidence-file {
-    display: none;
+.image-container {
+    position: fixed;
+    bottom: -7rem;
+    right: 6rem;
 }

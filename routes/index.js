@@ -27,6 +27,10 @@ router.get('/home/project', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../FrontEnd/project', 'project.html'));
 })
 
+router.get('/home/evidences', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../FrontEnd/evidence', 'evidence.html'));
+})
+
 router.get('/home/gestor/:id', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../FrontEnd/home/home-gestor', 'home-gestor.html'));
 })
@@ -35,6 +39,12 @@ router.get('/home/talentoso/:id', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../FrontEnd/home/home-talentoso', 'home-talentoso.html'));
 })
 
+router.get('/gestor/:id', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../FrontEnd/view', 'view-gestor.html'));
+})
 
+router.get('/talentoso/:id', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../FrontEnd/view', 'view-talentoso.html'));
+})
 
 module.exports = router;

@@ -97,6 +97,10 @@ body {
     margin-top: 1rem;
 }
 
+.login-logo {
+    width: 350px;
+}
+
 
 .logo-text {
     display: flex;
@@ -123,18 +127,65 @@ body {
     top: -2rem;
 }
 
+.button-right {
+    float: right;
+    cursor: pointer;
+}
+
+.form-container {
+    display: none;
+    margin-top: 2rem;
+    clear: both;
+}
+
 .project-container {
+    display: block;
+}
+
+.form-profile {
+    display: none;
+}
+
+.profile-item {
+    box-shadow: 0 0 4px grey;
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+.profile-title {
+    background-color: #f08774;
+    padding: 0.3rem 0.3rem;
+    color: white;
+}
+
+.profile-description {
+    padding: 0 0.4rem;
+}
+
+.profile-footer {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-list {
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    margin: 0;
 }
 
 .project-item {
-    width: 230px;
+    width: 250px;
     border-radius: 5px;
     box-shadow: 0 0 4px grey;
     margin-right: 0.5rem;
-    float: left;
-    margin-bottom: 1rem;
-    cursor: pointer;
 }
 
 .project-name {
@@ -156,3 +207,39 @@ body {
     padding-bottom: 0.5rem;
 }
 
+.project-container {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.login-fail {
+    background-color: #f5a8a8;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.login-success {
+    background-color: lightgreen;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: green;
+    border-radius: 5px;
+    display: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.image-container {
+    position: fixed;
+    bottom: -7rem;
+}
+
+.evidence-file {
+    display: none;
+}

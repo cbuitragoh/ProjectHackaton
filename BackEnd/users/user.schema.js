@@ -27,3 +27,23 @@ exports.createUser = async (user, session) => {
 
     return new User(user).save({session});
 }
+
+exports.getUsersByTags = async (tags, session) => {
+    const query = {
+        active: true,
+        talent: {$ne: null}
+    }
+    const users = await User.find(query).session(session);
+
+    return users.filter((user) => user.tags.filter((tag) => tags.includes(tag)).length);
+}
+
+exports.getUsersById = async (id, session) => {
+    
+    return User.findById(mongoose.Types.ObjectId(id)).session(session);
+}
+
+exports.updateUser = async (id, data, session) => {
+    return User.findByIdAndUpdate(mongoose.Types.ObjectId(id), {$set: data}).session(session);
+}
+
