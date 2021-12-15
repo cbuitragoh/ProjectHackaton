@@ -10,6 +10,11 @@
     <title>CREHACE</title>
 </head>
 <body>
+    <div class="logout-container">
+        <span>
+            <input type="button" class="button-logout" value="loguot" onclick="logout()">
+        </span>
+    </div>
     
     <div class="home-register">
         
@@ -47,6 +52,7 @@
                 <div class="input-container">
                     <input class="input" type="text" name="tags" id="tags" placeholder="Tags separados por (,)">
                     <label class="input-label" for="tags"></label>
+                    <span class="input-error" id="tagsError"></span>
                 </div>
                 <span>Cuentanos acerca de ti y tu talento</span>
                 <div class="input-container">
@@ -77,6 +83,11 @@
         </div>
     </div>
     <script type="module" src="/register/register.mjs"></script>
+    <script>
+        function logout(){
+    window.location.href="/";
+}
+    </script>
 
 </body>
 </html>

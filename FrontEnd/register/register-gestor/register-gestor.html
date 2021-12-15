@@ -7,9 +7,15 @@
     
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="/register/register.css">
+    
     <title>CREHACE</title>
 </head>
 <body>
+    <div class="logout-container">
+        <span>
+            <input type="button" class="button-logout" value="loguot" onclick="logout()">
+        </span>
+    </div>
     
     <div class="home-register">
         <div class="register-form-container">
@@ -61,15 +67,23 @@
                 </div>
             </form>
         </div>
+
         <div class="image-container">
             <img class="login-logo" src="../images/logo.jpg" alt="crehace">
             <div class="logo-text">
                 <span>CREHACE</span>
                 <span>Creemos juntos desde lo que sabes hacer</span>
             </div>
-
         </div>
+        
     </div>
+    
     <script type="module" src="/register/register.mjs"></script>
+    <script>
+        function logout(){
+    window.location.href="/";
+}
+    </script>
+    
 </body>
 </html>

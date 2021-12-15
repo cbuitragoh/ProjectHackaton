@@ -77,7 +77,7 @@ export function checkEmail(valor) {
 
   export function checkCompany(valor){
 
-    const passregex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/;
+    const passregex = /[a-zA-Z\t\h]+|(^$)/;
     const companyError = document.querySelector("#companyError");
 
     if (!valor) {

@@ -1,6 +1,6 @@
 import { post } from '../javascript/CRUD.mjs';
 import { validateFormGestor, checkName, checkCompany, checkEmail, checkPhone, checkContrasena, checkTags} from './register-gestor/formGestor.mjs';
-import { checkTalent } from './register-talentoso/formTalentoso.mjs';
+import { checkTalent, validateFormTalentoso } from './register-talentoso/formTalentoso.mjs';
 
 const registerForm = document.getElementById('register-form');
 const registerFail = document.getElementsByClassName('register-fail');
@@ -36,7 +36,8 @@ registerForm[5].addEventListener('input', () => {
 
 registerForm.addEventListener('submit', async ($event) => {
     $event.preventDefault();
-    await register().then((data) => {
+    if(validateFormGestor()){
+        await register().then((data) => {
             if (data.status === 200) {
                 registerSuccess[0].style.display = 'block';
 
@@ -48,6 +49,20 @@ registerForm.addEventListener('submit', async ($event) => {
                 }, 2000);
             }
         });
+    }else if(validateFormTalentoso()){
+        await register().then((data) => {
+            if (data.status === 200) {
+                registerSuccess[0].style.display = 'block';
+
+                window.location.href = "/";
+            } else {
+                registerFail[0].style.display = 'block';
+                setTimeout(() => {
+                    registerFail[0].style.display = 'none'
+                }, 2000);
+            }
+        });
+    }
         
 })
 
