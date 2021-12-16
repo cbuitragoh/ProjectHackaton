@@ -33,9 +33,9 @@ exports.getUsersByTags = async (tags, session) => {
         active: true,
         talent: {$ne: null}
     }
-    const users = await User.find(query).session(session);
+    return await User.find(query).session(session);
 
-    return users.filter((user) => user.tags.filter((tag) => tags.includes(tag)).length);
+    //return users.filter((user) => user.tags.filter((tag) => tags.includes(tag)).length);
 }
 
 exports.getUsersById = async (id, session) => {
