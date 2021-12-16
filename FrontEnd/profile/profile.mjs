@@ -76,11 +76,12 @@ async function setImage(urlImage) {
 
 
 async function getUser() {
+    
     const url = `/API/register/${currentUser._id}`
     get(url).then((data) => {
         if (data.status === 200) {
             data.json().then((user) => {
-                localStorage.setItem('CURRENT_USER', JSON.stringify(user))
+                localStorage.setItem('CURRENT_USER', JSON.stringify(user));
                 location.reload();
             })
         }
