@@ -8,6 +8,7 @@ var projectController = require('./project.controller');
 router.post('/', jsonParser, projectController.register);
 router.get('/talent/:talent', jsonParser, projectController.getProjectsByTalent);
 router.get('/:id', jsonParser, projectController.getProjects);
+router.delete('/:id', jsonParser, projectController.deleteProjects);
 /* 
 router.get('/validate', jsonParser, tokenController.validate);
 router.get('/forget-password', jsonParser, tokenController.getTemporaryToken);
