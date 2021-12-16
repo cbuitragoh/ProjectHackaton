@@ -1,5 +1,5 @@
 import { sendImage } from '../javascript/cloudinary.mjs';
-import { put } from '../javascript/CRUD.mjs';
+import { put, get } from '../javascript/CRUD.mjs';
 
 const profileImage = document.getElementById('profile-image');
 const profileName = document.getElementById('profile-name');
@@ -76,12 +76,11 @@ async function setImage(urlImage) {
 
 
 async function getUser() {
-    const userId = window.location.pathname.split("/");
-    const url = `/API/register/${userId[3]}`
+    const url = `/API/register/${currentUser._id}`
     get(url).then((data) => {
         if (data.status === 200) {
             data.json().then((user) => {
-                localStorage.setItem('CURRENT_USER', user)
+                localStorage.setItem('CURRENT_USER', JSON.stringify(user))
                 location.reload();
             })
         }
