@@ -1,4 +1,4 @@
-import { post, get } from '../javascript/CRUD.mjs';
+import { post, get, del } from '../javascript/CRUD.mjs';
 
 const profileImage = document.getElementById('profile-image');
 const profileName = document.getElementById('profile-name');
@@ -113,7 +113,7 @@ async function ownProjects() {
                     projectContainer.innerHTML += `<div class="project-item">                            
                             <div class="project-name">
                             ${project.name}
-                            <input type="button" class="button-card" value="x" ></div>
+                            <input type="button" class="button-card" value="x" id="${project._id}"></div>
                             <div class="project-description">${project.description}</div>
                             <span>Perfiles</span>
                             <hr>
@@ -128,3 +128,20 @@ async function ownProjects() {
 
 
 }
+
+function deleteProject(id){
+    const url = `/API/project/${id}`;
+    del(url).then((data) => {
+        if(data.status === 200) {
+            location.reload();
+        }
+    })
+}
+
+projectContainer.addEventListener('click', (event) => {
+    const eventPath = event.target.id;
+    if(eventPath && eventPath!=="project-container"){
+        deleteProject(eventPath);
+    }
+    
+})

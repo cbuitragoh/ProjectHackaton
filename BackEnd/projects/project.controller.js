@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-const { createProject, getProjects, getProjectsByTalent } = require('./project.schema');
+const { createProject, getProjects, getProjectsByTalent, deleteProjects } = require('./project.schema');
 
 exports.register = async (req, res, next) => {
     const session = await mongoose.startSession();
@@ -48,6 +48,24 @@ exports.getProjectsByTalent = async (req, res, next) => {
         await session.commitTransaction();
         session.endSession();
         res.send(projects);
+    } catch (error) {
+        console.log(error)
+        session.abortTransaction();
+        res.status(500).send(error.message || error);
+    }
+}
+
+exports.deleteProjects = async (req, res, next) => {
+    const session = await mongoose.startSession();
+    session.startTransaction();
+    var user = req.params.id;
+
+    
+    try {
+        var projects = await deleteProjects(user, session);
+        await session.commitTransaction();
+        session.endSession();
+        res.status(200).send();
     } catch (error) {
         console.log(error)
         session.abortTransaction();

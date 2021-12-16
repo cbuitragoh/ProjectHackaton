@@ -37,3 +37,8 @@ exports.getProjectsByTalent = async (talent, session) => {
      return await Project.find({active: true}).session(session);
      // return projects.filter(project => project.profiles.filter(profile => profile.name.includes(talent)).length);
 }
+
+exports.deleteProjects = async (idProject, session) => {
+    
+    return Project.deleteOne({_id:mongoose.Types.ObjectId(idProject)}).session(session) ;
+}
