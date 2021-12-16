@@ -185,6 +185,7 @@ hr {
     border-radius: 5px;
     box-shadow: 0 0 4px grey;
     margin-right: 0.5rem;
+    float: left;
 }
 
 .project-name {
@@ -208,7 +209,6 @@ hr {
 
 .project-container {
     margin-top: 1rem;
-    display: flex;
 }
 
 .login-fail {
