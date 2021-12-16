@@ -19,7 +19,8 @@ registerForm[2].addEventListener('input', () => {
 })
 
 registerForm[3].addEventListener('input', () => {
-    if(registerForm.id=='company'){
+    const path = window.location.pathname.split('/');
+    if(path[2] === 'gestor'){
         checkCompany(registerForm[3].value);
     }else{
         checkTalent(registerForm[3].value);
@@ -37,7 +38,7 @@ registerForm[5].addEventListener('input', () => {
 registerForm.addEventListener('submit', async ($event) => {
     $event.preventDefault();
     const path = window.location.pathname.split('/');
-
+    console.log(path)
     if(path[2] === 'gestor') {
         if(validateFormGestor()) {
             await register().then((data) => {
