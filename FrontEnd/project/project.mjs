@@ -9,8 +9,8 @@ const formProfile = document.getElementById('form-profile');
 const buttonProfile = document.getElementById('button-profile');
 const registerForm = document.getElementById('register-form');
 const profileAccessHome = document.getElementById('profile-access-home');
-const loginSuccess = document.getElementById('login-success');
-const loginFail = document.getElementById('login-fail');
+const loginFail = document.getElementsByClassName('login-fail');
+const loginSuccess = document.getElementsByClassName('login-success');
 let currentUser;
 const profiles = [];
 
