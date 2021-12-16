@@ -36,34 +36,39 @@ registerForm[5].addEventListener('input', () => {
 
 registerForm.addEventListener('submit', async ($event) => {
     $event.preventDefault();
-    if(validateFormGestor()){
-        await register().then((data) => {
-            if (data.status === 200) {
-                registerSuccess[0].style.display = 'block';
+    const path = window.location.pathname.split('/');
 
-                window.location.href = "/";
-            } else {
-                registerFail[0].style.display = 'block';
-                setTimeout(() => {
-                    registerFail[0].style.display = 'none'
-                }, 2000);
-            }
-        });
-    }else if(validateFormTalentoso()){
-        await register().then((data) => {
-            if (data.status === 200) {
-                registerSuccess[0].style.display = 'block';
-
-                window.location.href = "/";
-            } else {
-                registerFail[0].style.display = 'block';
-                setTimeout(() => {
-                    registerFail[0].style.display = 'none'
-                }, 2000);
-            }
-        });
-    }
-        
+    if(path[2] === 'gestor') {
+        if(validateFormGestor()) {
+            await register().then((data) => {
+                if (data.status === 200) {
+                    registerSuccess[0].style.display = 'block';
+    
+                    window.location.href = "/";
+                } else {
+                    registerFail[0].style.display = 'block';
+                    setTimeout(() => {
+                        registerFail[0].style.display = 'none'
+                    }, 2000);
+                }
+            });
+        }
+    } else {
+        if(validateFormTalentoso()){
+            await register().then((data) => {
+                if (data.status === 200) {
+                    registerSuccess[0].style.display = 'block';
+    
+                    window.location.href = "/";
+                } else {
+                    registerFail[0].style.display = 'block';
+                    setTimeout(() => {
+                        registerFail[0].style.display = 'none'
+                    }, 2000);
+                }
+            });
+        }
+    } 
 })
 
 async function register() {
